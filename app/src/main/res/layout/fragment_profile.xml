@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.HistoryFragment">
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="@dimen/dimen_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text_color"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen_15"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="@dimen/size_20"
+            android:text="History"/>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:padding="@dimen/dimen_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_history"
+        app:layout_constraintTop_toBottomOf="@+id/llTitle"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
